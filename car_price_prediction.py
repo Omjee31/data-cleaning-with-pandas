@@ -10,17 +10,10 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 # Input data files are available in the read-only "../input/" directory
 # For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory
 
-import os
-
-#'''path = r"C:\Users\omjee\.cache\kagglehub"
-
-#for dirname, _, filenames in os.walk(path):
- #   for filename in filenames:
-       # print(os.path.join(dirname, filename))'''
 
 
 
-df = pd.read_csv("car_price_prediction_.csv")
+df = pd.read_csv("bmw.csv")
 df_encoded = pd.get_dummies(df, columns=['model', 'transmission', 'fuelType', 'engineSize','mpg','mileage','tax'])
 
 # Features & target
